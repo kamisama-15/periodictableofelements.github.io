@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periodic Table</title>
+</head>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            font-family: sans-serif;
+            font-weight: 600;
+        }
+        .container{
+            display:flex;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            height:auto;
+            padding-top: 20px;
+            padding-bottom: 20px;
+            position: relative;
+        }
+        .container h2{
+            position: absolute;
+            z-index: 1;
+            top: 160px;
+            left: 240px;
+            font-size: 40px;
+        }
+        .periodic-table{
+            width: 90%;
+            height: 110vh;
+            padding: 20px;
+            background-color: white;
+            margin-top: 20px;
+        }
+        .first-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .first-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .first-row div:nth-child(1){
+            background-color: yellow;
+        }
+        .first-row div:nth-child(18){
+            background-color: orange;
+        }
+        .first-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .first-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .first-row div span{
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+        .second-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .second-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .second-row div:nth-child(1){
+            background-color:red;
+        }
+        .second-row div:nth-child(2){
+            background-color: violet;
+        }
+        .second-row div:nth-child(13){
+            background-color: green;
+        }
+        .second-row div:nth-child(14){
+            background-color: yellow;
+        }
+        .second-row div:nth-child(15){
+            background-color: yellow;
+        }
+        .second-row div:nth-child(16){
+            background-color: yellow;
+        }
+        .second-row div:nth-child(17){
+            background-color: yellow;
+        }
+        .second-row div:nth-child(18){
+            background-color: orange;
+        }
+        .second-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .second-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .second-row div span{
+            font-size: 10px;
+            font-family: sans-serif;
+        }
+        .third-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .third-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .third-row div:nth-child(1){
+            background-color: red;
+        }
+        .third-row div:nth-child(2){
+            background-color: violet;
+        }
+        .third-row div:nth-child(13){
+            background-color: yellowgreen;
+        }
+        .third-row div:nth-child(14){
+            background-color: green;
+        }
+        .third-row div:nth-child(15){
+            background-color: yellow;
+        }
+        .third-row div:nth-child(16){
+            background-color: yellow;
+        }
+        .third-row div:nth-child(17){
+            background-color: yellow;
+        }
+        .third-row div:nth-child(18){
+            background-color: orange;
+        }
+        .third-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;;
+        }
+        .third-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .third-row div span{
+            font-size: 8px;
+            font-family: sans-serif;
+        }
+        .fourth-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .fourth-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .fourth-row div:nth-child(1){
+            background-color: red;
+        }
+        .fourth-row div:nth-child(2){
+            background-color: violet
+        }
+        .fourth-row div:nth-child(3){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(4){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(5){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(6){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(7){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(8){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(9){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(10){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(11){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(12){
+            background-color: skyblue;
+        }
+        .fourth-row div:nth-child(13){
+            background-color: yellowgreen;
+        }
+        .fourth-row div:nth-child(14){
+            background-color: green;
+        }
+        .fourth-row div:nth-child(15){
+            background-color: green;
+        }
+        .fourth-row div:nth-child(16){
+            background-color: yellow;
+        }
+        .fourth-row div:nth-child(17){
+            background-color: yellow;
+        }
+        .fourth-row div:nth-child(18){
+            background-color: orange;
+        }
+        .fourth-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .fourth-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .fourth-row div span{
+            font-size: 8px;
+            font-family: sans-serif;
+        }
+        .fifth-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .fifth-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .fifth-row div:nth-child(1){
+            background-color: red;
+        }
+        .fifth-row div:nth-child(2){
+            background-color: violet;
+        }
+        .fifth-row div:nth-child(3){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(4){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(5){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(6){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(7){
+            background-color: skyblue;;
+        }
+        .fifth-row div:nth-child(8){
+            background-color: skyblue;;
+        }
+        .fifth-row div:nth-child(9){
+            background-color:skyblue;
+        }
+        .fifth-row div:nth-child(10){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(11){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(12){
+            background-color: skyblue;
+        }
+        .fifth-row div:nth-child(13){
+            background-color: yellowgreen;
+        }
+        .fifth-row div:nth-child(14){
+            background-color: yellowgreen;
+        }
+        .fifth-row div:nth-child(15){
+            background-color: green;
+        }
+        .fifth-row div:nth-child(16){
+            background-color: green;
+        }
+        .fifth-row div:nth-child(17){
+            background-color: yellow;
+        }
+        .fifth-row div:nth-child(18){
+            background-color: orange;
+        }
+        .fifth-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .fifth-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .fifth-row div span{
+            font-size: 8px;
+            font-family: sans-serif;
+        }
+
+        .sixth-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .sixth-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .sixth-row div:nth-child(1){
+            background-color: red;
+        }
+        .sixth-row div:nth-child(2){
+            background-color: violet;
+        }
+        .sixth-row div:nth-child(3){
+            background-color: transparent;
+        }
+        .sixth-row div:nth-child(4){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(5){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(6){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(7){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(8){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(9){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(10){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(11){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(12){
+            background-color: skyblue;
+        }
+        .sixth-row div:nth-child(13){
+            background-color: yellowgreen;;
+        }
+        .sixth-row div:nth-child(14){
+            background-color: yellowgreen;
+        }
+        .sixth-row div:nth-child(15){
+            background-color: yellowgreen;
+        }
+        .sixth-row div:nth-child(16){
+            background-color:   green;
+        }
+        .sixth-row div:nth-child(17){
+            background-color: yellow;
+        }
+        .sixth-row div:nth-child(18){
+            background-color: orange;
+        }
+        
+        .sixth-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .sixth-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .sixth-row div span{
+            font-size: 8px;
+            font-family: sans-serif;
+        }
+
+        .seventh-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+            margin-bottom: 20px;
+        }
+        .seventh-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .seventh-row div:nth-child(1){
+            background-color: red;
+        }
+        .seventh-row div:nth-child(2){
+            background-color: violet;
+        }
+        .seventh-row div:nth-child(3){
+            background-color: transparent;
+        }
+        .seventh-row div:nth-child(4){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(5){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(6){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(7){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(8){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(9){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(10){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(11){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(12){
+            background-color: skyblue;
+        }
+        .seventh-row div:nth-child(13){
+            background-color: yellowgreen;;
+        }
+        .seventh-row div:nth-child(14){
+            background-color: yellowgreen;
+        }
+        .seventh-row div:nth-child(15){
+            background-color: yellowgreen;
+        }
+        .seventh-row div:nth-child(16){
+            background-color: yellowgreen;
+        }
+        .seventh-row div:nth-child(17){
+            background-color: yellow;
+        }
+        .seventh-row div:nth-child(18){
+            background-color: orange;
+        }
+        .seventh-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .seventh-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .seventh-row div span{
+            font-size: 7px;
+            font-family: sans-serif;
+        }
+
+        .eight-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .eight-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .eight-row div:nth-child(1){
+            background-color: transparent;
+        }
+        .eight-row div:nth-child(2){
+            background-color: transparent;
+        }
+        .eight-row div:nth-child(3){
+            background-color: transparent;
+        }
+        .eight-row div:nth-child(4){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(5){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(6){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(7){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(8){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(9){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(10){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(11){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(12){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(13){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(14){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(15){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(16){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(17){
+            background-color: aqua;
+        }
+        .eight-row div:nth-child(18){
+            background-color: aqua;
+        }
+        .eight-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .eight-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .eight-row div span{
+            font-size: 8px;
+            font-family: sans-serif;
+        }
+
+        .ninth-row{
+            display: flex;
+            width: 100%;
+            height:auto;
+        }
+        .ninth-row div{
+            flex: 1;
+            flex-direction: row;
+            margin:2px;
+            height: 60px;
+            display: flex;
+            text-align: top;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
+        }
+        .ninth-row div:nth-child(1){
+            background-color: transparent;
+        }
+        .ninth-row div:nth-child(2){
+            background-color: transparent;
+        }
+        .ninth-row div:nth-child(3){
+            background-color: transparent;
+        }
+        .ninth-row div:nth-child(4){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(5){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(6){
+            background-color: rgb(14, 233, 160);
+        }
+        
+        .ninth-row div:nth-child(7){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(8){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(9){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(10){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(11){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(12){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(13){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(14){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(15){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(16){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(17){
+            background-color: rgb(14, 233, 160);
+        }
+        .ninth-row div:nth-child(18){
+            background-color: rgb(14, 233, 160);
+        }
+        
+        .ninth-row div p{
+            position:absolute;
+            top: 5px;
+            font-size: 10px;
+        }
+        .ninth-row div h6{
+            font-size: 20px;
+            margin-top: 10px;
+        }
+        .ninth-row div span{
+            font-size: 8px;
+            font-family: sans-serif;
+        }
+    </style>
+<body>
+    <div class="container">
+        <h2>Periodic Table of Elements</h2>
+        <div class="periodic-table">
+            <div class="first-row">
+                <div><p>1</p><h6>H</h6><span>Hydrogen</span></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><p>2</p><h6>He</h6><span>Helium</span></div>
+            </div>
+            <div class="second-row">
+                <div><p>3</p><h6>Li</h6><span>Lithium</span></div>
+                <div><p>4</p><h6>Be</h6><span>Berylium</span></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><p>5</p><h6>B</h6><span>Boron</span></div>
+                <div><p>6</p><h6>C</h6><span>Carbon</span></div>
+                <div><p>7</p><h6>N</h6><span>Nitorgen</span></div>
+                <div><p>8</p><h6>O</h6><span>Oxygen</span></div>
+                <div><p>9</p><h6>F</h6><span>Flourine</span></div>
+                <div><p>10</p><h6>Ne</h6><span>Neon</span></div>
+            </div>
+            <div class="third-row">
+                <div><p>11</p><h6>Na</h6><span>Sodium</span></div>
+                <div><p>12</p><h6>Mg</h6><span>Magnesium</span></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><p>13</p><h6>Al</h6><span>Aluminum</span></div>
+                <div><p>14</p><h6>Si</h6><span>Silicon</span></div>
+                <div><p>15</p><h6>P</h6><span>Phosphorus</span></div>
+                <div><p>16</p><h6>S</h6><span>Sulfur</span></div>
+                <div><p>17</p><h6>Cl</h6><span>Chlorine</span></div>
+                <div><p>18</p><h6>Ar</h6><span>Argan</span></div>
+            </div>
+            <div class="fourth-row">
+                <div><p>19</p><h6>K</h6><span>Potassium</span></div>
+                <div><p>20</p><h6>Ca</h6><span>Calcium</span></div>
+                <div><p>21</p><h6>Sc</h6><span>Scandium</span></div>
+                <div><p>22</p><h6>Ti</h6><span>Titanium</span></div>
+                <div><p>23</p><h6>V</h6><span>Vanadium</span></div>
+                <div><p>24</p><h6>Cr</h6><span>Chromium</span></div>
+                <div><p>25</p><h6>Mn</h6><span>Magnesium</span></div>
+                <div><p>26</p><h6>Fe</h6><span>Iron</span></div>
+                <div><p>27</p><h6>Co</h6><span>Cobalt</span></div>
+                <div><p>28</p><h6>Ni</h6><span>Nickerl</span></div>
+                <div><p>29</p><h6>Cu</h6><span>Cupper</span></div>
+                <div><p>30</p><h6>Zn</h6><span>Zinc</span></div>
+                <div><p>31</p><h6>Ga</h6><span>Gallium</span></div>
+                <div><p>32</p><h6>Ge</h6><span>Germanium</span></div>
+                <div><p>33</p><h6>As</h6><span>Arsenic</span></div>
+                <div><p>34</p><h6>Se</h6><span>Selenium</span></div>
+                <div><p>35</p><h6>Br</h6><span>Bromine</span></div>
+                <div><p>36</p><h6>Kr</h6><span>Krypton</span></div>
+            </div>
+            <div class="fifth-row">
+                <div><p>37</p><h6>Rb</h6><span>Rubidium</span></div>
+                <div><p>38</p><h6>Sr</h6><span>Strontium</span></div>
+                <div><p>39</p><h6>Y</h6><span>Yttrium</span></div>
+                <div><p>40</p><h6>Zr</h6><span>Zirconium</span></div>
+                <div><p>41</p><h6>Nb</h6><span>Niobium</span></div>
+                <div><p>42</p><h6>Mo</h6><span>Molybdenium</span></div>
+                <div><p>43</p><h6>Tc</h6><span>Technicium</span></div>
+                <div><p>44</p><h6>Ru</h6><span>Ruthenium</span></div>
+                <div><p>45</p><h6>Rh</h6><span>Rhodium</span></div>
+                <div><p>46</p><h6>Pd</h6><span>Palladium</span></div>
+                <div><p>47</p><h6>Ag</h6><span>Silver</span></div>
+                <div><p>48</p><h6>Cd</h6><span>Cadmium</span></div>
+                <div><p>49</p><h6>In</h6><span>Indium</span></div>
+                <div><p>50</p><h6>Sn</h6><span>Tin</span></div>
+                <div><p>51</p><h6>Sb</h6><span>Antimony</span></div>
+                <div><p>52</p><h6>Te</h6><span>Tellurium</span></div>
+                <div><p>53</p><h6>I</h6><span>Iodine</span></div>
+                <div><p>54</p><h6>Xe</h6><span>Xenon</span></div>
+            </div>
+            <div class="sixth-row">
+                <div><p>55</p><h6>Cs</h6><span>Cesium</span></div>
+                <div><p>56</p><h6>Ba</h6><span>Barium</span></div>
+                <div></div>
+                <div><p>72</p><h6>Hf</h6><span>Hafnium</span></div>
+                <div><p>73</p><h6>Ta</h6><span>Tantalum</span></div>
+                <div><p>74</p><h6>W</h6><span>Tungsten</span></div>
+                <div><p>75</p><h6>Re</h6><span>Ronium</span></div>
+                <div><p>76</p><h6>Os</h6><span>Osmium</span></div>
+                <div><p>77</p><h6>Ir</h6><span>Iridium</span></div>
+                <div><p>78</p><h6>Pt</h6><span>Platinum</span></div>
+                <div><p>79</p><h6>Au</h6><span>Gold</span></div>
+                <div><p>80</p><h6>Hg</h6><span>Mercury</span></div>
+                <div><p>81</p><h6>Ti</h6><span>Thalium</span></div>
+                <div><p>82</p><h6>Pb</h6><span>Lead</span></div>
+                <div><p>83</p><h6>Bi</h6><span>Bimath</span></div>
+                <div><p>84</p><h6>Po</h6><span>Pelonium</span></div>
+                <div><p>85</p><h6>At</h6><span>Astatine</span></div>
+                <div><p>86</p><h6>Rn</h6><span>Radon</span></div>
+            </div>
+            <div class="seventh-row">
+                <div><p>87</p><h6>Fr</h6><span>Francium</span></div>
+                <div><p>88</p><h6>Ra</h6><span>Radium</span></div>
+                <div></div>
+                <div><p>104</p><h6>Rf</h6><span>Rutherfordium</span></div>
+                <div><p>105</p><h6>Db</h6><span>Dabmium</span></div>
+                <div><p>106</p><h6>Sg</h6><span>Seaborgium</span></div>
+                <div><p>107</p><h6>Bh</h6><span>Bohrium</span></div>
+                <div><p>108</p><h6>Hs</h6><span>Hassium</span></div>
+                <div><p>109</p><h6>Mt</h6><span>Meitnerium</span></div>
+                <div><p>110</p><h6>Ds</h6><span>Darmstadtium</span></div>
+                <div><p>111</p><h6>Rg</h6><span>Roentgenium</span></div>
+                <div><p>112</p><h6>Cn</h6><span>Cadmium</span></div>
+                <div><p>113</p><h6>Nh</h6><span>Hydrogen</span></div>
+                <div><p>114</p><h6>Fl</h6><span>Hydrogen</span></div>
+                <div><p>115</p><h6>Mc</h6><span>Hydrogen</span></div>
+                <div><p>116</p><h6>Lv</h6><span>Hydrogen</span></div>
+                <div><p>117</p><h6>Ts</h6><span>Hydrogen</span></div>
+                <div><p>118</p><h6>Og</h6><span>Hydrogen</span></div>
+            </div>
+            <div class="eight-row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><p>57</p><h6>La</h6><span>Lahanium</span></div>
+                <div><p>58</p><h6>Ce</h6><span>Cerium</span></div>
+                <div><p>59</p><h6>Pr</h6><span>Praseodymium</span></div>
+                <div><p>60</p><h6>Nd</h6><span>Neodymium</span></div>
+                <div><p>61</p><h6>Pm</h6><span>Promethium</span></div>
+                <div><p>62</p><h6>Sm</h6><span>Samarium</span></div>
+                <div><p>63</p><h6>Eu</h6><span>Europium</span></div>
+                <div><p>64</p><h6>Gd</h6><span>Gadolinium</span></div>
+                <div><p>65</p><h6>Tb</h6><span>Tarbium</span></div>
+                <div><p>66</p><h6>Dy</h6><span>Dysprosium</span></div>
+                <div><p>67</p><h6>Ho</h6><span>Holmium</span></div>
+                <div><p>68</p><h6>Er</h6><span>Erbium</span></div>
+                <div><p>69</p><h6>Tm</h6><span>Thulium</span></div>
+                <div><p>70</p><h6>Yb</h6><span>Iterbium</span></div>
+                <div><p>71</p><h6>Lu</h6><span>Luteium</span></div>
+            </div>
+            <div class="ninth-row">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div><p>89</p><h6>Ac</h6><span>Actinium</span></div>
+                <div><p>90</p><h6>Th</h6><span>Thorium</span></div>
+                <div><p>91</p><h6>Pa</h6><span>Protactinium</span></div>
+                <div><p>92</p><h6>U</h6><span>Uranium</span></div>
+                <div><p>93</p><h6>Np</h6><span>Neptuneium</span></div>
+                <div><p>94</p><h6>Pu</h6><span>Plutonium</span></div>
+                <div><p>95</p><h6>Am</h6><span>Amerium</span></div>
+                <div><p>96</p><h6>Cm</h6><span>Curium</span></div>
+                <div><p>97</p><h6>Bk</h6><span>Barkelium</span></div>
+                <div><p>98</p><h6>Cf</h6><span>Californium</span></div>
+                <div><p>99</p><h6>Es</h6><span>Eistenium</span></div>
+                <div><p>100</p><h6>Fm</h6><span>Fermium</span></div>
+                <div><p>101</p><h6>Md</h6><span>Mendelevium</span></div>
+                <div><p>102</p><h6>No</h6><span>Nobelium</span></div>
+                <div><p>103</p><h6>Lr</h6><span>Lawrencium</span></div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>
